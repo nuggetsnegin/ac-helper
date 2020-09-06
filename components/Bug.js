@@ -58,11 +58,6 @@ export default function Bug({ bug }) {
           margin-bottom: 5px;
           text-transform: uppercase;
         }
-
-        .bug-info {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-        }
       `}</style>
     </div>
   );
