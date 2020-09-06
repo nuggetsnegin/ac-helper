@@ -8,14 +8,16 @@ export default function BugSearch() {
   useEffect(() => {
     //returning a promise
     axios.get('http://acnhapi.com/v1/bugs/').then((response) => {
-      console.log(response);
       setData(response.data);
     });
   }, []);
 
   return (
     <div>
-      <Bug data={data} />
+      {Object.keys(data).map((key) => {
+        const bug = data[key];
+        return <Bug key={key} bug={bug} />;
+      })}
     </div>
   );
 }
